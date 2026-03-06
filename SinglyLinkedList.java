@@ -12,6 +12,20 @@ public class SinglyLinkedList {
         Node newNode = new Node(data);
         newNode.next = this.head;
         this.head = newNode;
+    }
+
+    public void InsertAtEnd(int data) {
+        if (this.head == null) {
+            Node newNode = new Node(data);
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        if (this.head != null) {
+            head = head.next;
+            Node newNode = new Node(data);
+            newNode.next = this.head;
+
+        }
 
     }
 
@@ -35,6 +49,8 @@ public class SinglyLinkedList {
         this.InsertAtBeginning(1);
         this.InsertAtBeginning(2);
         this.InsertAtBeginning(3);
+        this.InsertAtEnd(4);
+
         this.PintAllNodesData();
 
     }
